@@ -1,0 +1,123 @@
+  <section class="product-category">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="title text-center">
+            <h2>{{section.settings.product_category_header}}</h2>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="category-box">
+            <a href={{section.settings.product_category_top_left_link}}>
+              <img src="{{ section.settings.product_category_bottom_left_img | img_url: '1920x'}}" alt="">
+              <div class="content">
+                <h3>{{section.settings.product_category_top_left_header}}</h3>
+                <p>{{section.settings.product_category_top_left_txt}}</p>
+              </div>
+            </a>  
+          </div>
+          <div class="category-box">
+            <a href={{section.settings.product_category_right_link}}>
+              <img src="{{ section.settings.product_category_top_left_img | img_url: '1920x'}}" alt="">
+              <div class="content">
+                <h3>{{section.settings.product_category_bottom_left_header}}</h3>
+                <p>{{section.settings.product_category_bottom_left_txt}}</p>
+              </div>
+            </a>  
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="category-box category-box-2">
+            <a href={{section.settings.product_category_bottom_left_link}}>
+              <img src="{{ section.settings.product_category_right_img | img_url: '1920x'}}" alt="">
+              <div class="content">
+                <h3>{{section.settings.product_category_right_header}}</h3>
+                <p>{{section.settings.product_category_right_txt}}</p>
+              </div>
+            </a>  
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {% schema %}
+   {
+    "name": "Product Category",
+    "settings": [
+      {
+        "type": "text",
+        "id": "product_category_header",
+        "label": "Product Category Header",
+        "default": "Product Category"
+      },
+      {
+        "type": "text",
+        "id": "product_category_right_header",
+        "label": "Product Category Right Header",
+        "default": "Clothes Sales"
+      },
+      {
+        "type": "text",
+        "id": "product_category_right_txt",
+        "label": "Product Category Right Text",
+        "default": "Shop New Season Clothing"
+      },
+      {
+        "type": "image_picker",
+        "id": "product_category_right_img",
+        "label": "Product Category Right Image"
+      },
+      {
+        "type": "url",
+        "id": "product_category_right_link",
+        "label": "Product Category Right Link"
+      },
+      {
+        "type": "text",
+        "id": "product_category_bottom_left_header",
+        "label": "Product Category Bottom Left Header",
+        "default": "Clothes Sales"
+      },
+      {
+        "type": "text",
+        "id": "product_category_bottom_left_txt",
+        "label": "Product Category Bottom Left Text",
+        "default": "Shop New Season Clothing"
+      },
+      {
+        "type": "image_picker",
+        "id": "product_category_bottom_left_img",
+        "label": "Product Category Bottom Left Image"
+      },
+      {
+        "type": "url",
+        "id": "product_category_bottom_left_link",
+        "label": "Product Category Bottom Left Link"
+      },
+      {
+        "type": "text",
+        "id": "product_category_top_left_header",
+        "label": "Product Category Top Left Header",
+        "default": "Clothes Sales"
+      },
+      {
+        "type": "text",
+        "id": "product_category_top_left_txt",
+        "label": "Product Category Top Left Text",
+        "default": "Shop New Season Clothing"
+      },
+      {
+        "type": "image_picker",
+        "id": "product_category_top_left_img",
+        "label": "Product Category Top Left Image"
+      },
+      {
+        "type": "url",
+        "id": "product_category_top_left_link",
+        "label": "Product Category Top Left Link"
+      }
+    ]
+  }
+  {% endschema %}
