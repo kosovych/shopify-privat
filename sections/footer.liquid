@@ -1,0 +1,84 @@
+<footer class="footer section text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <ul class="social-media">
+          <li>
+            <a href="{{ section.settings.facebook }}">
+              <i class="fa fa-facebook-f"></i>
+            </a>
+          </li>
+          <li>
+            <a href="{{ section.settings.instagram }}">
+              <i class="fa fa-instagram"></i>
+            </a>
+          </li>
+          <li>
+            <a href="{{ section.settings.twitter }}">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a href="{{ section.settings.pinterest }}">
+              <i class="fa fa-pinterest"></i>
+            </a>
+          </li>
+        </ul>
+        <ul class="footer-menu">
+        {% for block in section.blocks %}
+          <li>
+            <a href="{{block.settings.block_url}}">{{ block.settings.block_text }}</a>
+          </li>
+        {% endfor %}
+        </ul>
+        <p class="copyright-text">Copyright &#9400; Fashion</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+{% schema %}
+  {
+    "name": "Footer social links",
+    "settings": [
+      {
+        "type": "text",
+        "id": "facebook",
+        "label": "Facebook Link"
+      },
+      {
+        "type": "text",
+        "id": "instagram",
+        "label": "Instagram Link"
+      },
+      {
+        "type": "text",
+        "id": "Twitter",
+        "label": "Twitter Link"
+      },
+      {
+        "type": "text",
+        "id": "pinterest",
+        "label": "Pinterest Link"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "footer_links",
+        "name": "Footer Links",
+        "settings": [
+          {
+            "type": "text",
+            "id": "block_text",
+            "label": "Text"
+          },
+          {
+            "type": "url",
+            "id": "block_url",
+            "label": "Link"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
