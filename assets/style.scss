@@ -463,7 +463,8 @@ p.with-icons i {
   display: inline-block;
 }
 
-.product-item .product-thumb .preview-meta li a, .product-item .product-thumb .preview-meta li span {
+.product-item .product-thumb .preview-meta li a, .product-item .product-thumb .preview-meta li button, .product-item .product-thumb .preview-meta li span {
+  border: none;
   background: #fff;
   padding: 10px 0px;
   cursor: pointer;
